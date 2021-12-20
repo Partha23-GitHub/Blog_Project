@@ -1,0 +1,95 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block title %} 
+    My Blog
+{% endblock %}
+{% block css_files %}
+     <link rel="stylesheet" href="{static 'app/post.css' %}">
+     <link rel="stylesheet" href="{% static 'app/index.css' %}">
+{% endblock %}
+{% block content %}
+    
+    <section id="welcome">
+        <header>
+            <img src="{%static 'app/image/mypic.jpeg' %}" alt="Partha-author of the blog">
+            <h2>Partha's Blog</h2>
+        </header>
+        <p>I'm Partha & i love to write blog about tech!</p>
+    </section>
+    <section id="latest-posts">
+        <h2> My Leatest Thoughts</h2>
+        <ul>
+          {% for post in posts %}
+            {% include "app/includes/post.html" %}
+          {% endfor %}
+           
+        </ul>
+    </section>
+        
+    <section id="about">
+        <h2>What i do</h2>
+        <p>
+            I love to help others and enjoy exploring new technologies! 
+        </p>
+        <p>
+            My goal is kepp growing as a developer - and if i could help you to be the same, it will be very happy for me.
+        </p>
+    </section>
+   <style>
+       .post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #latest-posts {
+  background-color: rgb(224, 240, 238);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 40rem;
+  margin: -3rem auto 2rem auto;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
+}
+#latest-posts h2 {
+  text-align: center;
+}
+  
+  .post a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s ease;
+    padding: 1rem;
+  }
+  
+  .post a:hover,
+  .post a:active {
+    transform: scale(1.1);
+    background-color: #c47a9f;
+    color: white;
+  }
+  
+  .post img {
+    width: 7rem;
+    height: 7rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .post h3 {
+    margin: 0.25rem 0;
+  }
+  
+  .post time {
+    color: #666666;
+    margin: 0.25rem;
+    font-style: italic;
+    font-size: 0.85rem;
+  }
+  
+  .post:hover time,
+  .post:active time {
+    color: white;
+  }
+   </style>
+{% endblock %}

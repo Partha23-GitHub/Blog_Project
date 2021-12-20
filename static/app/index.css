@@ -1,0 +1,93 @@
+#welcome {
+  background: linear-gradient(to right top, #2bb4d6, #074c5e);
+  padding: 6rem 12%;
+  height: 28rem;
+}
+
+#welcome header {
+  display: flex;
+  align-items: flex-start;
+  margin: 3rem auto;
+}
+
+#welcome img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  object-position: top;
+  border: 5px solid white;
+  border-radius: 30px;
+  background-color: #ffe1bf;
+  transform: rotateZ(-6deg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+#welcome h2 {
+  font-size: 3.5rem;
+  margin: 0 0 0 2rem;
+  color: #e4e4e4;
+  width: 10rem;
+}
+
+#welcome p {
+  color: white;
+  font-size: 1.5rem;
+}
+
+#latest-posts {
+  background-color: rgb(224, 240, 238);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 40rem;
+  margin: -5rem auto 2rem auto;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
+}
+
+#latest-posts h2 {
+  text-align: center;
+}
+
+#latest-posts ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+#latest-posts li {
+  flex: 1;
+}
+.post img{
+  width: 10rem;
+  height: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+  object-position: top;
+  border: 5px solid white;
+  border-radius: 70px;
+  background-color: #ffe1bf;
+  transform: rotateZ(0deg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+.post_content{
+  text-align: center;
+}
+#about {
+  text-align: center;
+  padding: 3rem;
+  background-color: #ebdaec;
+  margin-top: 5rem;
+}
+
+#about h2 {
+  font-size: 3rem;
+}
+
+#about p {
+  font-size: 1.2rem;
+  color: #353535;
+}
